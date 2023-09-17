@@ -126,15 +126,52 @@
 Abstract
 
 \section{Result and Analysis}
+\subsection{Part I: The Greenhouse Effect}
+\subsubsection{Temperature Graphs}
 \begin{figure}[!ht]
 	\centering
-	\subfloat[frequency = 100Hz]{\includegraphics[width=0.4\columnwidth]{images/part1-graph.jpg}}
+	\subfloat[Combined]{\includegraphics[width=0.4\columnwidth]{images/part1-graph.jpg}}\\
 	\qquad
-	\subfloat[frequency = 1kHz]{\includegraphics[width=0.4\columnwidth]{images/part1-temp1-graph.jpg}}
+	\subfloat[Covered Jar]{\includegraphics[width=0.4\columnwidth]{images/part1-temp1-graph.jpg}}
 	\qquad
-	\subfloat[frequency = 10kHz]{\includegraphics[width=0.4\columnwidth]{images/part1-temp1-stats.jpg}}
-	\caption{Signal Transmission Distortion for LPF}
-	\label{fig:STDLPF}
+	\subfloat[Uncovered Jar]{\includegraphics[width=0.4\columnwidth]{images/part1-temp2-graph.jpg}}
+	\caption{Temperature Graphs}
+	\label{fig:TempGraphs}
+\end{figure}
+
+\subsubsection{Temperature Table}
+
+\begin{table}[!ht]
+	\caption{\label{tab:Table 1} Temperature Table}
+	\centering
+	\begin{tabular}{c c c}
+		\toprule
+		  & \textbf{Covered Jar (\degree C)}
+		  & \textbf{Uncovered Jar (\degree C)}        \\
+		\cmidrule[0.4pt](r{0.125em}){1-1}%
+		\cmidrule[0.4pt](lr{0.125em}){2-2}%
+		\cmidrule[0.4pt](lr{0.125em}){3-3}%
+		% \midrule
+		\textbf{min}     & 28.4                    & 28.1                      \\
+		\textbf{max}     & 29.7                    & 29.3                      \\
+		\textbf{mean}    & 29.1                    & 28.6                      \\
+		\textbf{st. dev} & 0.51668                 & 0.26998
+	\end{tabular}
+\end{table}
+
+\subsection{Part II: Photosynthesis and Respiration}
+\subsubsection{Covered Jar}
+\paragraph{CO2 and O2 Graphs}
+
+\begin{figure}[!ht]
+	\centering
+	\subfloat[CO2 and O2]{\includegraphics[width=0.4\columnwidth]{images/part2-covered-graph.jpg}}\\
+	\qquad
+	\subfloat[O2]{\includegraphics[width=0.4\columnwidth]{images/part2-covered-o2-graph.jpg}}
+	\qquad
+	\subfloat[CO2]{\includegraphics[width=0.4\columnwidth]{images/part2-covered-co2-graph.jpg}}
+	\caption{Covered Jar}
+	\label{fig:CoveredJar}
 \end{figure}
 
 \section{Conclusion}
@@ -145,10 +182,10 @@ abc
 \begin{table}[]
 	\begin{tabular}{lll}
 		        & Covered Jar (\degree C) & Uncovered Jar (\degree C) \\
-		min     & 28.4            & 28.1              \\
-		max     & 29.7            & 29.3              \\
-		mean    & 29.1            & 28.6              \\
-		st. dev & 0.51668         & 0.26998
+		min     & 28.4                    & 28.1                      \\
+		max     & 29.7                    & 29.3                      \\
+		mean    & 29.1                    & 28.6                      \\
+		st. dev & 0.51668                 & 0.26998
 	\end{tabular}
 \end{table}
 \begin{table}
