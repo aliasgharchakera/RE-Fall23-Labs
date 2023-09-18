@@ -11,6 +11,7 @@
 \usepackage{verbatim}
 \usepackage{textcomp}
 \usepackage{gensymb}
+\usepackage{float}
 
 \usepackage{relsize}
 
@@ -123,17 +124,24 @@
 	\item Does greenhouse gases really make the temperature rise?
 \end{itemize}
 \section{Abstract}
-This report explores the greenhouse effect's impact on Earth's atmosphere, taking into consideration of natural and human factors that fuel
-global warming. A strong emphasis is created to reduce golbal warming pollution, this is done with the aid of practical experiments to us understand 
-these complex processes. Part A focuses on dissecting the causes of global warming, with emphasis on the role of greenhouse gases. 
-A hands-on experiment, based on a climate change by modeling our earth, is conducted to measure temperature fluctuations, so that we can foster a tangible understanding of this 
-critical environmental issue. Part B delves into photosynthesis and respiration in plants, this experiments aids to quantify carbon dioxide and oxygen 
-exchange. This helped us understand how life itself interacts with the environment, and enabled us to grasp a better concept
-of Earth's ecosystems and the difficulties it faces. Overall, this report aims to provide a comprehensive understanding of the greenhouse effect and its impact on our planent. 
+This report explores the greenhouse effect's impact on Earth's atmosphere,
+taking into consideration of natural and human factors that fuel global
+warming. A strong emphasis is created to reduce golbal warming pollution, this
+is done with the aid of practical experiments to us understand these complex
+processes. Part A focuses on dissecting the causes of global warming, with
+emphasis on the role of greenhouse gases. A hands-on experiment, based on a
+climate change by modeling our earth, is conducted to measure temperature
+fluctuations, so that we can foster a tangible understanding of this critical
+environmental issue. Part B delves into photosynthesis and respiration in
+plants, this experiments aids to quantify carbon dioxide and oxygen exchange.
+This helped us understand how life itself interacts with the environment, and
+enabled us to grasp a better concept of Earth's ecosystems and the difficulties
+it faces. Overall, this report aims to provide a comprehensive understanding of
+the greenhouse effect and its impact on our planent.
 \section{Result and Analysis}
 \subsection{Part I: The Greenhouse Effect}
 \subsubsection{Temperature Graphs}
-\begin{figure}[!ht]
+\begin{figure}[H]
 	\centering
 	\subfloat[Combined]{\includegraphics[width=0.4\columnwidth]{images/part1-graph.jpg}}\\
 	\qquad
@@ -146,31 +154,31 @@ of Earth's ecosystems and the difficulties it faces. Overall, this report aims t
 
 \subsubsection{Temperature Table}
 
-\begin{table}[!ht]
+\begin{table}[H]
 	\caption{\label{tab:Table 1} Temperature Table}
 	\centering
 	\begin{tabular}{c c c}
 		\toprule
-		  & \textbf{Covered Jar (\degree C)}
-		  & \textbf{Uncovered Jar (\degree C)}        \\
+		                 & \textbf{Covered Jar (\degree C)}
+		                 & \textbf{Uncovered Jar (\degree C)}           \\
 		\cmidrule[0.4pt](r{0.125em}){1-1}%
 		\cmidrule[0.4pt](lr{0.125em}){2-2}%
 		\cmidrule[0.4pt](lr{0.125em}){3-3}%
 		% \midrule
-		\textbf{min}     & 28.4                    & 28.1                      \\
-		\textbf{max}     & 29.7                    & 29.3                      \\
-		\textbf{mean}    & 29.1                    & 28.6                      \\
-		\textbf{st. dev} & 0.51668                 & 0.26998
+		\textbf{min}     & 28.4                               & 28.1    \\
+		\textbf{max}     & 29.7                               & 29.3    \\
+		\textbf{mean}    & 29.1                               & 28.6    \\
+		\textbf{st. dev} & 0.51668                            & 0.26998
 	\end{tabular}
 \end{table}
 
 \subsection{Part II: Photosynthesis and Respiration}
 \subsubsection{Covered Jar}
-\paragraph{CO2 and O2 Graphs}
+\paragraph{O2 and CO2 Graphs}
 
-\begin{figure}[!ht]
+\begin{figure}[H]
 	\centering
-	\subfloat[CO2 and O2]{\includegraphics[width=0.4\columnwidth]{images/part2-covered-graph.jpg}}\\
+	\subfloat[O2 and CO2]{\includegraphics[width=0.4\columnwidth]{images/part2-covered-graph.jpg}}\\
 	\qquad
 	\subfloat[O2]{\includegraphics[width=0.4\columnwidth]{images/part2-covered-o2-graph.jpg}}
 	\qquad
@@ -179,89 +187,95 @@ of Earth's ecosystems and the difficulties it faces. Overall, this report aims t
 	\label{fig:CoveredJar}
 \end{figure}
 
+\paragraph{CO2 and O2 Table}
+
+\begin{table}[H]
+	\caption{\label{tab:Table 1} O2 and CO2 Table}
+	\centering
+	\begin{tabular}{c c c}
+		\toprule
+		                 & \textbf{O2 (ppt)}
+		                 & \textbf{CO2 (ppt)}           \\
+		\cmidrule[0.4pt](r{0.125em}){1-1}%
+		\cmidrule[0.4pt](lr{0.125em}){2-2}%
+		\cmidrule[0.4pt](lr{0.125em}){3-3}%
+		% \midrule
+		\textbf{min}     & 6.7                & 0.032   \\
+		\textbf{max}     & 8.84               & 1.277   \\
+		\textbf{mean}    & 7.4                & 0.902   \\
+		\textbf{st. dev} & 0.60866            & 0.23678
+	\end{tabular}
+\end{table}
+
+\subsubsection{Uncovered Jar}
+\paragraph{O2 and CO2 Graphs}
+
+\begin{figure}[H]
+	\centering
+	\subfloat[O2 and CO2]{\includegraphics[width=0.4\columnwidth]{images/part2-uncovered-graph.jpg}}\\
+	\qquad
+	\subfloat[O2]{\includegraphics[width=0.4\columnwidth]{images/part2-uncovered-o2-graph.jpg}}
+	\qquad
+	\subfloat[CO2]{\includegraphics[width=0.4\columnwidth]{images/part2-uncovered-co2-graph.jpg}}
+	\caption{Uncovered Jar}
+	\label{fig:UncoveredJar}
+\end{figure}
+
+\paragraph{CO2 and O2 Table}
+
+\begin{table}[H]
+	\caption{\label{tab:Table 1} O2 and CO2 Table}
+	\centering
+	\begin{tabular}{c c c}
+		\toprule
+		                 & \textbf{O2 (ppt)}
+		                 & \textbf{CO2 (ppt)}           \\
+		\cmidrule[0.4pt](r{0.125em}){1-1}%
+		\cmidrule[0.4pt](lr{0.125em}){2-2}%
+		\cmidrule[0.4pt](lr{0.125em}){3-3}%
+		% \midrule
+		\textbf{min}     & 6.53                & 0.376   \\
+		\textbf{max}     & 8.24               & 0.586   \\
+		\textbf{mean}    & 7.35               & 0.498   \\
+		\textbf{st. dev} & 0.56999            & 0.036946
+	\end{tabular}
+\end{table}
+
 \section{Conclusion}
-abc
+For part A of the experiment, we observed that the covered jar had a higher
+temperature than the uncovered jar. This is because the covered jar was
+insulated, and the heat was trapped inside. This is similar to the greenhouse
+effect, where the heat is trapped inside the earth's atmosphere.
+
+For part B of the experiment, we observed that the covered jar had a higher
+concentration of CO2 and a lower concentration of O2 than the uncovered jar.
+This is because the plant inside the uncovered jar was photosynthesizing, and
+releasing O2 and absorbing CO2. The plant inside the covered jar was
+respiring, and releasing CO2 and absorbing O2.
 
 \section{Questions To Ponder}
 \subsection{Part A:}
 
 \begin{enumerate}
-    \item Explain with reasons which beaker covered or uncovered has the greatest temperature change?
-    \item Which beaker has the greatest rate of temperature change and why?
-    \item What is slope and the rate of reaction?
-    \item Why might the greenhouse effect be a problem for our earth?
-    \item Did the model greenhouse warm faster or slower than the control? What do you think caused the difference?
-    \item Describe one advantage of using a greenhouse.
+	\item Explain with reasons which beaker covered or uncovered has the greatest
+	      temperature change?
+	\item Which beaker has the greatest rate of temperature change and why?
+	\item What is slope and the rate of reaction?
+	\item Why might the greenhouse effect be a problem for our earth?
+	\item Did the model greenhouse warm faster or slower than the control? What do you
+	      think caused the difference?
+	\item Describe one advantage of using a greenhouse.
 \end{enumerate}
 
 \subsection{Part B:}
 
 \begin{enumerate}
-    \item Were either of the rate values for CO2 a positive number? If so, what is the biological significance of this?
-    \item Were either of the rate values for O2 a positive number? If so, what is the biological significance of this?
-    \item Do you have evidence that photosynthesis occurred in leaves? Explain.
-    \item Do you have evidence that respiration occurred in leaves? Explain.
+	\item Were either of the rate values for CO2 a positive number? If so, what is the
+	      biological significance of this?
+	\item Were either of the rate values for O2 a positive number? If so, what is the
+	      biological significance of this?
+	\item Do you have evidence that photosynthesis occurred in leaves? Explain.
+	\item Do you have evidence that respiration occurred in leaves? Explain.
 \end{enumerate}
 
-
-\begin{table}[]
-	\begin{tabular}{lll}
-		        & Covered Jar (\degree C) & Uncovered Jar (\degree C) \\
-		min     & 28.4                    & 28.1                      \\
-		max     & 29.7                    & 29.3                      \\
-		mean    & 29.1                    & 28.6                      \\
-		st. dev & 0.51668                 & 0.26998
-	\end{tabular}
-\end{table}
-\begin{table}
-	\caption[short]{\label{tab:Table 1} Experimental result for First order low pass filter}
-	\centering
-	\begin{tabular}{c c c c c}
-		\toprule
-		\multicolumn{4}{l|}{Chybovost \%} & \textbf{temp2}                \\
-		\cmidrule[0.4pt](r{0.125em}){1-1}%
-		\cmidrule[0.4pt](lr{0.125em}){2-2}%
-		\cmidrule[0.4pt](lr{0.125em}){3-3}%
-		\cmidrule[0.4pt](lr{0.125em}){4-4}%
-		\cmidrule[0.4pt](lr{0.125em}){5-5}%
-		10                                & 10             & 10 & 10 & 10
-
-	\end{tabular}
-\end{table}
-
-%****************************************Table 1******************************************%
-\begin{table}[!ht]
-	\caption{\label{tab:Table 1} Experimental result for Second order low pass filter}
-	\centering
-	\begin{tabular}{c c c c c}
-		\toprule
-		\textbf{$ V_{in} (mV)$}
-		     & \textbf{$ f $}
-		     & \textbf{$V_{2} (mV)$}
-		     & \textbf{(I.L)dB}
-		     & \textbf{Phase ($\phi $)}                                   \\
-		\cmidrule[0.4pt](r{0.125em}){1-1}%
-		\cmidrule[0.4pt](lr{0.125em}){2-2}%
-		\cmidrule[0.4pt](lr{0.125em}){3-3}%
-		\cmidrule[0.4pt](lr{0.125em}){4-4}%
-		\cmidrule[0.4pt](lr{0.125em}){5-5}%
-		% \midrule
-		5760 & 100 Hz                   & 1190   & -13.70 & $-5^{\circ}$  \\
-		\myrowcolour%
-		5730 & 200 Hz                   & 1160   & -13.87 & $-11^{\circ}$ \\
-		5630 & 500 Hz                   & 1070   & -14.42 & $-21^{\circ}$ \\
-		\myrowcolour%
-		5320 & 1 kHz                    & 849    & -15.94 & $-38^{\circ}$ \\
-		4930 & 2 kHz                    & 560    & -18.89 & $-65^{\circ}$ \\
-		\myrowcolour%
-		4830 & 5 kHz                    & 265.1  & -25.21 & $-74^{\circ}$ \\
-		4780 & 10 kHz                   & 123.86 & -31.73 & $-77^{\circ}$ \\
-		\myrowcolour%
-		4700 & 20 kHz                   & 32.55  & -43.19 & $-79^{\circ}$ \\
-		4700 & 50 kHz                   & 7.7    & -55.7  & $-83^{\circ}$ \\
-		\myrowcolour%
-		4700 & 100 kHz                  & 2.29   & -63.26 & $-85^{\circ}$ \\
-		\bottomrule                                                       \\
-	\end{tabular}
-\end{table}
 \end{document}
