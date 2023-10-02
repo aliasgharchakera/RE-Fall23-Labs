@@ -5,3 +5,6 @@
 *.fls
 *.log
 *.fdb_latexmk
+*.pdf
+/lab2/ibrahimlab2/
+*.zip
