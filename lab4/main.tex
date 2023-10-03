@@ -1,0 +1,219 @@
+\documentclass[a4paper, 12pt, english]{article}
+
+% \usepackage[portuges]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage[colorinlistoftodos]{todonotes}
+
+\usepackage{indentfirst}
+\usepackage{verbatim}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{float}
+
+\usepackage{relsize}
+
+\usepackage{lipsum}% http://ctan.org/pkg/lipsum
+\usepackage{xcolor}% http://ctan.org/pkg/xcolor
+\usepackage{xparse}% http://ctan.org/pkg/xparse
+\NewDocumentCommand{\myrule}{O{1pt} O{2pt} O{black}}{%
+	\par\nobreak % don't break a page here
+	\kern\the\prevdepth % don't take into account the depth of the preceding line
+	\kern#2 % space before the rule
+	{\color{#3}\hrule height #1 width\hsize} % the rule
+	\kern#2 % space after the rule
+	\nointerlineskip % no additional space after the rule
+}
+\usepackage[section]{placeins}
+
+\usepackage{booktabs}
+\usepackage{colortbl}%
+\newcommand{\myrowcolour}{\rowcolor[gray]{0.925}}
+
+\usepackage[obeyspaces]{url}
+\usepackage{etoolbox}
+\usepackage[colorlinks,citecolor=black,urlcolor=blue,bookmarks=false,hypertexnames=true]{hyperref}
+
+\usepackage{geometry}
+\geometry{
+	paper=a4paper, % Change to letterpaper for US letter
+	inner=3cm, % Inner margin
+	outer=3cm, % Outer margin
+	bindingoffset=.5cm, % Binding offset
+	top=2cm, % Top margin
+	bottom=2cm, % Bottom margin
+	%showframe, % Uncomment to show how the type block is set on the page
+}
+\usepackage{fancyhdr}
+
+% Define header and footer
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{ENER 104L}
+\rhead{iSciM, Habib University} % Right-aligned page number in the header
+\rfoot{\thepage} % Right footer text
+%*******************************************************************************%
+%************************************START**************************************%
+%*******************************************************************************%
+\begin{document}
+
+%************************************TITLE PAGE**************************************%
+\begin{titlepage}
+	\begin{center}
+		\textbf{\LARGE Habib University}\\[0.5cm]
+		\textbf{\large iSciM}\\[0.2cm]
+		\textbf {\large Fall 2023}\\[0.2cm]
+		\vspace{20pt}
+		\includegraphics[width=5cm]{../habiblogo.jpg}\\[1cm]
+		\par
+		\vspace{20pt}
+		\textbf{\Large ENER 104L RENEWABLE ENERGY}\\
+		\vspace{15pt}
+		\myrule[1pt][7pt]
+		\textbf{\LARGE  LABORATORY REPORT 4}\\
+		\vspace{15pt}
+		\textbf{\large Parabolic Trough}\\
+		\myrule[1pt][7pt]
+		\vspace{25pt}
+		\begin{tabular}{@{}p{5cm}p{3cm}@{}}
+			\textbf{\large Student Name} & \textbf{\large Student ID} \\
+			Ali Asghar Yousuf            & ay06993                    \\ % No1 
+			Syed Ibrahim Ali Haider      & sh06565                    \\ % No2
+		\end{tabular}
+
+		\vspace{10pt}
+		\begin{tabular}{@{}p{5cm}p{3cm}@{}}
+			\textbf{\large Group Name} & \textbf{\large Group No.} \\
+			Insane Fr                  & 1                         \\
+		\end{tabular}
+
+		\vspace{45pt}
+		\textbf {\large Lab Instructors:}\\[0.2cm]
+		\Large {Paishwa Naqvi}\\[0.1cm]
+		\Large {Amber Talat}\\[0.1cm]
+		\Large {Mah Noor Jamil}\\[0.1cm]
+	\end{center}
+
+	\par
+	\vfill
+	\begin{center}
+		\textbf{\today}\\
+	\end{center}
+
+\end{titlepage}
+
+%************************************TABLE OF CONTENTS**************************************%
+
+%  %Sumário
+%  \newpage
+%  \tableofcontents
+%  \thispagestyle{empty}
+%  %End Sumário
+
+%********************************%
+%***********SECTION 1************%
+%********************************%
+\newpage
+\section{Objectives}
+abc
+
+\section{Abstract}
+Abstract
+
+\section{Result and Analysis}
+\subsection{Part A}
+\subsubsection{Experiment 1}
+\begin{table}[H]
+	\caption{\label{tab:Table 1} Temperature Table}
+	\centering
+	\begin{tabular}{c c}
+		\toprule
+		\textbf{Time (min)}
+		   & \textbf{Temperature (\degree C)} \\
+		\cmidrule[0.4pt](r{0.125em}){1-1}%
+		\cmidrule[0.4pt](lr{0.125em}){2-2}%
+		% \midrule
+		0  & 26                               \\
+		2  & 27                               \\
+		4  & 27                               \\
+		6  & 27                               \\
+		8  & 27                               \\
+		10 & 27                               \\
+		12 & 27                               \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\subsubsection{Experiment 2}
+\begin{table}[H]
+	\caption{\label{tab:Table 2} Temperature Table}
+	\centering
+	\begin{tabular}{c c}
+		\toprule
+		\textbf{Time (min)}
+		   & \textbf{Temperature (\degree C)} \\
+		\cmidrule[0.4pt](r{0.125em}){1-1}%
+		\cmidrule[0.4pt](lr{0.125em}){2-2}%
+		% \midrule
+		0  & 26                               \\
+		2  & 28                               \\
+		4  & 29                               \\
+		6  & 30                               \\
+		8  & 31                               \\
+		10 & 32                               \\
+		12 & 33                               \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\subsection{Part B}
+\subsubsection{Experiment 1}
+\begin{table}[H]
+	\caption{\label{tab:Table 3} Temperature Table}
+	\centering
+	\begin{tabular}{c c}
+		\toprule
+		\textbf{Time (min)}
+		   & \textbf{Temperature (\degree C)} \\
+		\cmidrule[0.4pt](r{0.125em}){1-1}%
+		\cmidrule[0.4pt](lr{0.125em}){2-2}%
+		% \midrule
+		0  & 26                               \\
+		2  & 28                               \\
+		4  & 29                               \\
+		6  & 29                               \\
+		8  & 30                               \\
+		10 & 31                               \\
+		12 & 31                               \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\subsubsection{Experiment 2}
+\begin{table}[H]
+	\caption{\label{tab:Table 3} Temperature Table}
+	\centering
+	\begin{tabular}{c c}
+		\toprule
+		\textbf{Time (min)}
+		   & \textbf{Temperature (\degree C)} \\
+		\cmidrule[0.4pt](r{0.125em}){1-1}%
+		\cmidrule[0.4pt](lr{0.125em}){2-2}%
+		% \midrule
+		0  & 25                               \\
+		2  & 27                               \\
+		4  & 29                               \\
+		6  & 30                               \\
+		8  & 32                               \\
+		10 & 33                               \\
+		12 & 34                               \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+\section{Conclusion}
+abc
+
+
+\end{document}
