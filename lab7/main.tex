@@ -12,6 +12,8 @@
 \usepackage{textcomp}
 \usepackage{gensymb}
 \usepackage{float}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
 
 \usepackage{relsize}
 
@@ -122,13 +124,23 @@
 	\item To understand how the color of an object affects the amount of heat energy it
 	      absorbs.
 	\item To understand the role of insulation in reducing heat loss.
+	\item To understand the principle of the greenhouse effect.
 \end{itemize}
 
 \section{Abstract}
-Abstract
+The objective of this lab was to understand the concept of solar energy and its
+conversion to heat energy and why white tents are used in deserts. The
+experiment was divided into three parts. In the first part, we observed the
+effect of color on the amount of heat energy absorbed by an object. In the
+second part, we observed the effect of insulation on the amount of heat energy
+absorbed by an object. In the third part, we observed the effect of the
+greenhouse effect on the amount of heat energy abosrbed and then retained by an
+object.
 
 \section{Result and Analysis}
 \subsection{Part A}
+$T_i$ represents the initial temperature of the plate and $T_f$ represents the
+final temperature of the plate.
 \begin{table}[H]
 	\centering
 	\caption{Temperature Table for Part A}
@@ -160,9 +172,9 @@ the black plate was higher than that of the white plate.
 \end{table}
 
 The temperature of the uncovered plate increased by 8\degree C while the
-temperature of the insulated plate increased by 15\degree C. This
-is because the heat loss from the insulated plate was less than that of the
-uncovered plate. Therefore the temperature increase of the insulated plate was
+temperature of the insulated plate increased by 15\degree C. This is because
+the heat loss from the insulated plate was less than that of the uncovered
+plate. Therefore the temperature increase of the insulated plate was
 significantly higher than that of the uncovered plate.
 
 \subsection{Part C}
@@ -183,7 +195,7 @@ represents the temperature of the plate with the plexiglass.
 		5                   & 41                         & 42                         \\
 		6                   & 43                         & 45                         \\
 		7                   & 45                         & 47                         \\
-		\bottomrule \multicolumn{3}{l}{Lamp turned off}                                          \\ \bottomrule
+		\bottomrule \multicolumn{3}{l}{Lamp turned off}                               \\ \bottomrule
 		8                   & 45                         & 47                         \\
 		9                   & 43                         & 46                         \\
 		10                  & 41                         & 44                         \\
@@ -197,12 +209,84 @@ represents the temperature of the plate with the plexiglass.
 \end{table}
 
 The temperature of the plate without the plexiglass increased by 23\degree C
-while the temperature of the plate with the plexiglass increased by 25\degree
-C over 7 mins when the lamp was turned on. This is because the plexiglass simulated the greenhouse effect and trapped
-the heat inside. Therefore the temperature increase of the plate with the
-plexiglass was significantly higher than that of the plate without the
-plexiglass.
+while the temperature of the plate with the plexiglass increased by 25\degree C
+over 7 mins when the lamp was turned on. Similarly, after the lamp was turned
+off, the temperature of the plate without the plexiglass decreased by 11\degree
+C while the temperature of the plate with the plexiglass decreased by 8\degree
+C.
+
+This is because the plexiglass creates a greenhouse effect and reduces the heat
+loss from the plate. Therefore the temperature increase of the plate with the
+plexiglass was higher than that of the plate without the plexiglass when the
+lamp was turned on and the temperature decrease of the plate with the
+plexiglass was lower than that of the plate without the plexiglass when the
+lamp was turned off.
+
+% plot the above table as a graph in latex
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+		width=0.8\textwidth,
+		xlabel=Time (min),
+		ylabel=Temperature (\degree C),
+		legend pos=north west,
+		legend cell align={left},
+		% enlarge x limits=0.15,
+	]
+
+	\addplot table[x expr=\coordindex, y=T0] {
+			Time T0 Tp
+			0    22 22
+			1    26 27
+			2    30 31
+			3    34 35
+			4    38 39
+			5    41 42
+			6    43 45
+			7    45 47
+			8    45 47
+			9    43 46
+			10   41 44
+			11   39 43
+			12   38 42
+			13   37 41
+			14   35 40
+			15   34 39
+		};
+	\addlegendentry{$T_0$}
+
+	\addplot table[x expr=\coordindex, y=Tp] {
+			Time T0 Tp
+			0    22 22
+			1    26 27
+			2    30 31
+			3    34 35
+			4    38 39
+			5    41 42
+			6    43 45
+			7    45 47
+			8    45 47
+			9    43 46
+			10   41 44
+			11   39 43
+			12   38 42
+			13   37 41
+			14   35 40
+			15   34 39
+		};
+	\addlegendentry{$T_p$}
+\end{axis}
+\end{tikzpicture}
+\caption{Temperature Graph for Part C}
+\end{figure}
+
 \section{Conclusion}
-abc
+The results of the experiment showed that the color of an object affects the
+amount of heat energy it absorbs, darker colors absorb more light than lighter
+colors which results in higher energy absorption. The results also showed that
+insulation reduces heat loss and therefore increases the amount of heat energy
+absorbed by an object. Finally, we learnt that the greenhouse effect increases
+the amount of heat energy absorbed and then retained by an object.
 
 \end{document}
