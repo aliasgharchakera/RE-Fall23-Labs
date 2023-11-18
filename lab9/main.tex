@@ -1,0 +1,244 @@
+\documentclass[a4paper, 12pt, english]{article}
+
+% \usepackage[portuges]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage[colorinlistoftodos]{todonotes}
+
+\usepackage{indentfirst}
+\usepackage{verbatim}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{float}
+
+\usepackage{relsize}
+
+\usepackage{lipsum}% http://ctan.org/pkg/lipsum
+\usepackage{xcolor}% http://ctan.org/pkg/xcolor
+\usepackage{xparse}% http://ctan.org/pkg/xparse
+\NewDocumentCommand{\myrule}{O{1pt} O{2pt} O{black}}{%
+	\par\nobreak % don't break a page here
+	\kern\the\prevdepth % don't take into account the depth of the preceding line
+	\kern#2 % space before the rule
+	{\color{#3}\hrule height #1 width\hsize} % the rule
+	\kern#2 % space after the rule
+	\nointerlineskip % no additional space after the rule
+}
+\usepackage[section]{placeins}
+
+\usepackage{booktabs}
+\usepackage{colortbl}%
+\newcommand{\myrowcolour}{\rowcolor[gray]{0.925}}
+
+\usepackage[obeyspaces]{url}
+\usepackage{etoolbox}
+\usepackage[colorlinks,citecolor=black,urlcolor=blue,bookmarks=false,hypertexnames=true]{hyperref}
+
+\usepackage{geometry}
+\geometry{
+	paper=a4paper, % Change to letterpaper for US letter
+	inner=3cm, % Inner margin
+	outer=3cm, % Outer margin
+	bindingoffset=.5cm, % Binding offset
+	top=2cm, % Top margin
+	bottom=2cm, % Bottom margin
+	%showframe, % Uncomment to show how the type block is set on the page
+}
+\usepackage{fancyhdr}
+
+% Define header and footer
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{ENER 104L}
+\rhead{iSciM, Habib University} % Right-aligned page number in the header
+\rfoot{\thepage} % Right footer text
+%*******************************************************************************%
+%************************************START**************************************%
+%*******************************************************************************%
+\begin{document}
+
+%************************************TITLE PAGE**************************************%
+\begin{titlepage}
+	\begin{center}
+		\textbf{\LARGE Habib University}\\[0.5cm]
+		\textbf{\large iSciM}\\[0.2cm]
+		\textbf {\large Fall 2023}\\[0.2cm]
+		\vspace{20pt}
+		\includegraphics[width=5cm]{../habiblogo.jpg}\\[1cm]
+		\par
+		\vspace{20pt}
+		\textbf{\Large ENER 104L RENEWABLE ENERGY}\\
+		\vspace{15pt}
+		\myrule[1pt][7pt]
+		\textbf{\LARGE  LABORATORY REPORT 9}\\
+		\vspace{15pt}
+		\textbf{\large Fuel Energy}\\
+		\myrule[1pt][7pt]
+		\vspace{25pt}
+		\begin{tabular}{@{}p{5cm}p{3cm}@{}}
+			\textbf{\large Student Name} & \textbf{\large Student ID} \\
+			Ali Asghar Yousuf            & ay06993                    \\ % No1 
+			Syed Ibrahim Ali Haider      & sh06565                    \\ % No2
+		\end{tabular}
+
+		\vspace{10pt}
+		\begin{tabular}{@{}p{5cm}p{3cm}@{}}
+			\textbf{\large Group Name} & \textbf{\large Group No.} \\
+			Insane Fr                  & 1                         \\
+		\end{tabular}
+
+		\vspace{45pt}
+		\textbf {\large Lab Instructors:}\\[0.2cm]
+		\Large {Paishwa Naqvi}\\[0.1cm]
+		\Large {Mah Noor Jamil}\\[0.1cm]
+		\Large {Amber Talat}\\[0.1cm]
+	\end{center}
+
+	\par
+	\vfill
+	\begin{center}
+		\textbf{\today}\\
+	\end{center}
+
+\end{titlepage}
+
+%************************************TABLE OF CONTENTS**************************************%
+
+%  %Sumário
+%  \newpage
+%  \tableofcontents
+%  \thispagestyle{empty}
+%  %End Sumário
+
+%********************************%
+%***********SECTION 1************%
+%********************************%
+\newpage
+\section{Objectives}
+\begin{itemize}
+	\item Determine heat energy produced by different alcohols through controlled
+	      combustion and measure energy transfer to water, using its temperature change
+	      as a gauge.
+
+	\item Assess the varying efficiency levels of different alcohols as fuels by
+	      comparing the quantity of energy transferred to a known amount of water during
+	      controlled burning.
+
+	\item Utilize the specific heat capacity of water to calculate energy changes
+	      resulting from the combustion of known amounts of various alcohols.
+\end{itemize}
+
+\section{Abstract}
+Fossil fuels are the most widely used source of energy in the world. However,
+they are non-renewable and are depleting at a very fast rate. Moreover, they
+are also harmful to the environment. Therefore, it is important to find
+alternative sources of energy. In this experiment, we will be burning different
+alcohols and measuring the heat energy produced by them. We will then compare
+the heat energy produced by different alcohols and determine which one is the
+most efficient as a fuel.
+
+\section{Result and Analysis}
+We performed two runs of the experiment and recorded the observations in Table
+\ref{tab:table1} and Table \ref{tab:table2}. The calculations are also shown in
+the tables. The heat of combustion for each alcohol was calculated by dividing
+the heat transferred by the mass of the alcohol.
+\begin{table}[H]
+	\centering
+	\caption{Run 1}
+	\label{tab:table1}
+	\subfloat[Observations]{
+		\begin{tabular}{@{}lllllll@{}}
+			\toprule
+			\textbf{Alcohol} & \textbf{$T_i$ (\degree C)} & \textbf{$T_f$ (\degree C)} & \textbf{$\Delta T$ (\degree C)} & \textbf{$M_i$ (g)} & \textbf{$M_f$ (g)} & \textbf{$\Delta M$ (g)} \\ \midrule
+			Methanol         & 22                         & 74                         & 52                              & 213.87             & 212.51             & 1.36                    \\
+			Ethanol          & 26                         & 80                         & 54                              & 210.52             & 209.20             & 1.32                    \\
+			Propanol         & 26                         & 76                         & 50                              & 218.21             & 217.51             & 0.70                    \\
+			Butanol          & 25                         & 80                         & 55                              & 221.68             & 220.96             & 0.72                    \\ \bottomrule
+		\end{tabular}
+	}
+	\qquad
+	\subfloat[Calculations]{
+		\begin{tabular}{@{}lll@{}}
+			\toprule
+			\textbf{Alcohol} & \textbf{Heat transferred (J)} & \textbf{Heat of combustion (J/g)} \\ \midrule
+			Methanol         & 1.08e+04                      & 7.99e+03                          \\
+			Ethanol          & 1.13e+04                      & 8.55e+03                          \\
+			Propanol         & 1.05e+04                      & 1.49e+04                          \\
+			Butanol          & 1.15e+04                      & 1.60e+04                          \\ \bottomrule
+		\end{tabular}
+	}
+\end{table}
+
+In the first run, the heat of combustion of Butanol was the highest. This is
+because Butanol has the highest number of carbon atoms and therefore, it has
+the highest energy density. The heat of combustion of Methanol was the lowest
+because it has the lowest number of carbon atoms and therefore, it has the
+lowest energy density.
+
+\begin{table}[H]
+	\centering
+	\caption{Run 2}
+	\label{tab:table2}
+	\subfloat[Obervations]{
+		\begin{tabular}{@{}lllllll@{}}
+			\toprule
+			\textbf{Alcohol} & \textbf{$T_i$ (\degree C)} & \textbf{$T_f$ (\degree C)} & \textbf{$\Delta T$ (\degree C)} & \textbf{$M_i$ (g)} & \textbf{$M_f$ (g)} & \textbf{$\Delta M$ (g)} \\ \midrule
+			Methanol         & 25                         & 85                         & 60                              & 212.45             & 210.98             & 1.47                    \\
+			Ethanol          & 25                         & 80                         & 55                              & 209.12             & 207.82             & 1.30                    \\
+			Propanol         & 25                         & 66                         & 41                              & 217.50             & 216.77             & 0.73                    \\
+			Butanol          & 25                         & 78                         & 53                              & 220.90             & 220.23             & 0.67                    \\ \bottomrule
+		\end{tabular}
+	}
+	\qquad
+	\subfloat[Calculations]{
+		\begin{tabular}{@{}lll@{}}
+			\toprule
+			\textbf{Alcohol} & \textbf{Heat transferred (J)} & \textbf{Heat of combustion (J/g)} \\ \midrule
+			Methanol         & 1.25e+04                      & 8.50e+03                          \\
+			Ethanol          & 1.15e+04                      & 8.85e+03                          \\
+			Propanol         & 8.57e+03                      & 1.18e+04                          \\
+			Butanol          & 1.11e+04                      & 1.65e+04                          \\ \bottomrule
+		\end{tabular}
+	}
+\end{table}
+
+In the second run, we observed the same trend. The heat of combustion of
+Butanol was the highest and the heat of combustion of Methanol was the lowest.
+
+\section{Conclusion}
+In this experiment, we burned different alcohols and measured the heat energy
+produced by them. We then compared the heat energy produced by different
+alcohols and reached the conclusion that Butanol is the most efficient as a
+fuel. However, Butanol has a larger carbon footprint than the others due to the
+higher number of carbon atoms in its structure. Therefore,
+despite being the most efficient, it is not the best option for a fuel and we
+should look for more sustainable alternatives.
+
+\section{Questions}
+\begin{enumerate}
+	\item Which fuel provides the most energy per gram of fuel burned?
+
+	      \textbf{Answer:} Butanol provides the most energy per gram of fuel burned.
+
+	\item What is meant by calorific value?
+
+	      \textbf{Answer:} Calorific value refers to the amount of heat energy released per unit mass of a fuel when it is completely burned.
+
+	\item Were you able to measure the total amount of energy released? Why or why not --
+	      explain your answer fully.
+
+	      \textbf{Answer:} No, we were not able to measure the total amount of energy released. This is because some of the energy is lost as heat to the surroundings during the combustion process. Therefore, we can only measure the energy transferred to the water, which is an indirect measure of the total energy released.
+
+	\item Suggest a method of reducing heat loss to the environment.
+
+	      \textbf{Answer:} One method of reducing heat loss to the environment is by using insulation around the combustion apparatus. This can help minimize heat transfer to the surroundings and improve the efficiency of the combustion process.
+
+	\item What 'fuel' do we put in our bodies? What happens in your body with that 'fuel'
+	      similar and dissimilar to how 'fuel' is used in your car?
+
+	      \textbf{Answer:} The 'fuel' we put in our bodies is food. Similar to how fuel is used in a car, our bodies convert the food we consume into energy through a process called metabolism. However, unlike a car, our bodies can extract energy from food in a more controlled and efficient manner, allowing us to use the energy for various physiological processes.
+\end{enumerate}
+
+\end{document}
