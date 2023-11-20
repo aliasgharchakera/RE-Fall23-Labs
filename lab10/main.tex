@@ -137,11 +137,19 @@
 \end{itemize}
 
 \section{Abstract}
+Thermogenerators are devices that convert heat energy into electrical energy.
+They are used in a variety of applications, including power generation,
+temperature measurement, and heat flow measurement. In this experiment, we
+observed the effect of temperature on the output voltage of a thermogenerator.
+We also observed the difference in the working of the thermogenerator when the
+hot and cold sides are interchanged.
 
 \section{Result and Analysis}
 \subsection{Part A}
 \subsubsection{Experiment 1}
-
+In the first experiment, we measured the voltage across the thermogenerator
+when we used our hand to warm different sides of the thermogenerator. The
+results are shown in Table \ref{tab:partA1}.
 \begin{table}[H]
 	\centering
 	\caption{Part A Experiment 1}
@@ -149,14 +157,26 @@
 	\begin{tabular}{@{}lll@{}}
 		\toprule
 		\textbf{Side} & \textbf{Type} & \textbf{Voltage (V)} \\ \midrule
-		Upper         & Warm          & 0.06                 \\
+		Upper         & Warm          & 0.060                \\
 		Upper         & Cold          & -0.115               \\
-		Under         & Warm          & -0.07                \\
+		Under         & Warm          & -0.070                \\
 		Under         & Cold          & 0.072                \\ \bottomrule
 	\end{tabular}
 \end{table}
 
+We can see that the thermogenerator produces a positive voltage when the upper
+side is warm and a negative voltage when the upper side is cold. Similarly, the
+thermogenerator produces a negative voltage when the under side is warm and a
+positive voltage when the under side is cold. This is because the
+thermogenerator produces a voltage when there is a temperature difference
+between the two sides of the thermogenerator.
+
 \subsubsection{Experiment 2}
+In the second experiment, we connected the thermogenerator to a fan and a
+multimeter. We then measured the voltage across the thermogenerator when we
+used a cold water to cool the upper side of the thermogenerator. Similar to the
+first experiment, the thermogenerator produced a negative voltage. The results
+are shown in Table \ref{tab:partA2}.
 \begin{table}[H]
 	\centering
 	\caption{Part A Experiment 2}
@@ -164,18 +184,18 @@
 	\begin{tabular}{@{}llll@{}}
 		\toprule
 		\textbf{Time (s)} & \textbf{Voltage (V)} & \textbf{Observation}   \\ \midrule
-		0                 & -0.120                    & No movement of the fan \\
+		0                 & -0.120               & No movement of the fan \\
 		15                & -0.138               & No movement of the fan \\
-		30                & -0.14                & No movement of the fan \\
+		30                & -0.140               & No movement of the fan \\
 		45                & -0.152               & No movement of the fan \\
 		60                & -0.135               & No movement of the fan \\
-		75                & -0.23                & No movement of the fan \\
+		75                & -0.230               & No movement of the fan \\
 		90                & -0.116               & No movement of the fan \\
 		105               & -0.111               & No movement of the fan \\
 		120               & -0.105               & No movement of the fan \\
-		135               & -0.1                 & No movement of the fan \\
+		135               & -0.100               & No movement of the fan \\
 		150               & -0.096               & No movement of the fan \\
-		165               & -0.09                & No movement of the fan \\
+		165               & -0.090               & No movement of the fan \\
 		180               & -0.088               & No movement of the fan \\ \bottomrule
 	\end{tabular}
 \end{table}
@@ -215,8 +235,17 @@
 	\caption{Voltage vs Time}
 	\label{fig:a2}
 \end{figure}
+We can see that the voltage produced by the thermogenerator peaked at 45
+seconds because the temperature difference between the two sides of the
+thermogenerator was the highest at that point. After which the voltage
+decreased because the temperature difference between the two sides of the
+thermogenerator decreased as the cold water started to warm up. However,
+the voltage produced by the thermogenerator was not enough to turn on the fan.
 
 \subsubsection{Experiment 3}
+In the third experiment, we performed the same experiment as the second
+experiment, but we placed an aluminum block on the under side of the
+thermogenerator. The results are shown in Table \ref{tab:partA3}.
 
 \begin{table}[H]
 	\centering
@@ -225,13 +254,13 @@
 	\begin{tabular}{@{}llll@{}}
 		\toprule
 		\textbf{Time (s)} & \textbf{Voltage (V)} & \textbf{Observation}   \\ \midrule
-		0                 & -0.120                    & No movement of the fan \\
+		0                 & -0.120               & No movement of the fan \\
 		15                & -0.125               & No movement of the fan \\
 		30                & -0.146               & No movement of the fan \\
 		45                & -0.151               & No movement of the fan \\
-		60                & -0.15                & No movement of the fan \\
+		60                & -0.150               & No movement of the fan \\
 		75                & -0.146               & No movement of the fan \\
-		90                & -0.14                & No movement of the fan \\
+		90                & -0.140               & No movement of the fan \\
 		105               & -0.134               & No movement of the fan \\
 		120               & -0.129               & No movement of the fan \\
 		135               & -0.125               & No movement of the fan \\
@@ -241,7 +270,7 @@
 	\end{tabular}
 \end{table}
 
-\begin{figure}
+\begin{figure}[H]
 	\centering
 	\begin{tikzpicture}
 		\begin{axis}[
@@ -277,7 +306,17 @@
 	\label{fig:a3}
 \end{figure}
 
+We can see that similar to the second experiment, the voltage produced by the
+thermogenerator peaked at 45 seconds because the temperature difference between
+the two sides of the thermogenerator was the highest at that point. But the
+voltage decrease was slower than the second experiment because the aluminum
+block acted as a heat sink and kept the temperature difference between the two
+sides of the thermogenerator high for a longer period of time.
 \subsection{Part B}
+In part B of the experiment, we measured the voltage across the thermogenerator
+and the temperature of the water and the aluminum block when we used hot water
+to warm the upper side of the thermogenerator. The results are shown in Table
+\ref{tab:partB1}.
 
 \begin{table}[H]
 	\centering
@@ -397,6 +436,19 @@
 	\label{fig:graph}
 \end{figure}
 
+We can see that the voltage produced by the thermogenerator was the highest at
+the start of the experiment because the temperature difference between the two
+sides of the thermogenerator was the highest at that point. After which the
+voltage decreased because the temperature difference between the two sides of
+the thermogenerator decreased as the temperature of the water and the aluminum
+block came closer to each other.
+
 \section{Conclusion}
+With the help of this experiment, we were able to understand the concept of
+ambient heat and the working of a thermogenerator. We observed that the
+thermogenerator produces a voltage when there is a temperature difference
+between the two sides of the thermogenerator, and the voltage produced by the
+thermogenerator is proportional to the temperature difference between the two
+sides of the thermogenerator. 
 
 \end{document}
