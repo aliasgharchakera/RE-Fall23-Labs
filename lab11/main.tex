@@ -1,0 +1,210 @@
+\documentclass[a4paper, 12pt, english]{article}
+
+% \usepackage[portuges]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage[colorinlistoftodos]{todonotes}
+
+\usepackage{indentfirst}
+\usepackage{verbatim}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{float}
+
+\usepackage{relsize}
+
+\usepackage{lipsum}% http://ctan.org/pkg/lipsum
+\usepackage{xcolor}% http://ctan.org/pkg/xcolor
+\usepackage{xparse}% http://ctan.org/pkg/xparse
+\NewDocumentCommand{\myrule}{O{1pt} O{2pt} O{black}}{%
+	\par\nobreak % don't break a page here
+	\kern\the\prevdepth % don't take into account the depth of the preceding line
+	\kern#2 % space before the rule
+	{\color{#3}\hrule height #1 width\hsize} % the rule
+	\kern#2 % space after the rule
+	\nointerlineskip % no additional space after the rule
+}
+\usepackage[section]{placeins}
+
+\usepackage{booktabs}
+\usepackage{colortbl}%
+\newcommand{\myrowcolour}{\rowcolor[gray]{0.925}}
+
+\usepackage[obeyspaces]{url}
+\usepackage{etoolbox}
+\usepackage[colorlinks,citecolor=black,urlcolor=blue,bookmarks=false,hypertexnames=true]{hyperref}
+
+\usepackage{geometry}
+\geometry{
+	paper=a4paper, % Change to letterpaper for US letter
+	inner=3cm, % Inner margin
+	outer=3cm, % Outer margin
+	bindingoffset=.5cm, % Binding offset
+	top=2cm, % Top margin
+	bottom=2cm, % Bottom margin
+	%showframe, % Uncomment to show how the type block is set on the page
+}
+\usepackage{fancyhdr}
+
+% Define header and footer
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{ENER 104L}
+\rhead{iSciM, Habib University} % Right-aligned page number in the header
+\rfoot{\thepage} % Right footer text
+%*******************************************************************************%
+%************************************START**************************************%
+%*******************************************************************************%
+\begin{document}
+
+%************************************TITLE PAGE**************************************%
+\begin{titlepage}
+	\begin{center}
+		\textbf{\LARGE Habib University}\\[0.5cm]
+		\textbf{\large iSciM}\\[0.2cm]
+		\textbf {\large Fall 2023}\\[0.2cm]
+		\vspace{20pt}
+		\includegraphics[width=5cm]{../habiblogo.jpg}\\[1cm]
+		\par
+		\vspace{20pt}
+		\textbf{\Large ENER 104L RENEWABLE ENERGY}\\
+		\vspace{15pt}
+		\myrule[1pt][7pt]
+		\textbf{\LARGE  LABORATORY REPORT 11}\\
+		\vspace{15pt}
+		\textbf{\large DSSC}\\
+		\myrule[1pt][7pt]
+		\vspace{25pt}
+		\begin{tabular}{@{}p{5cm}p{3cm}@{}}
+			\textbf{\large Student Name} & \textbf{\large Student ID} \\
+			Ali Asghar Yousuf            & ay06993                    \\ % No1 
+			Syed Ibrahim Ali Haider      & sh06565                    \\ % No2
+		\end{tabular}
+
+		\vspace{10pt}
+		\begin{tabular}{@{}p{5cm}p{3cm}@{}}
+			\textbf{\large Group Name} & \textbf{\large Group No.} \\
+			Insane Fr                  & 1                         \\
+		\end{tabular}
+
+		\vspace{45pt}
+		\textbf {\large Lab Instructors:}\\[0.2cm]
+		\Large {Paishwa Naqvi}\\[0.1cm]
+		\Large {Mah Noor Jamil}\\[0.1cm]
+		\Large {Amber Talat}\\[0.1cm]
+	\end{center}
+
+	\par
+	\vfill
+	\begin{center}
+		\textbf{\today}\\
+	\end{center}
+
+\end{titlepage}
+
+%************************************TABLE OF CONTENTS**************************************%
+
+%  %Sumário
+%  \newpage
+%  \tableofcontents
+%  \thispagestyle{empty}
+%  %End Sumário
+
+%********************************%
+%***********SECTION 1************%
+%********************************%
+\newpage
+\section{Objectives}
+\begin{itemize}
+	\item Create a Dye Sensitized Solar Cell (DSSC)
+	\item Understand the working of a DSSC
+	\item Test the DSSC under different light sources
+\end{itemize}
+
+\section{Abstract}
+Solar cells are devices that convert light energy into electrical energy. They
+are made up of semiconductors that absorb light and convert it into electrical
+energy. Dye Sensitized Solar Cells (DSSC) are a type of solar cell that use dye
+to absorb light. In this experiment, we built a DSSC using a glass slide coated
+with Indium Tin Oxide (ITO) on one side. The ITO side was coated with titanium
+dioxide (TiO$_2$) and the other slide was coated with carbon. The slides were
+then sandwiched together with a layer of organic dye in between.
+
+\section{Result and Analysis}
+The resistance of the conductive side of the ITO slide was $31.3 \text{ k}
+	\Omega$ and the organic dye used was leaves juice. The DSSC was tested under
+different light sources to measure the voltage, current and power produced. The
+results are shown in Table \ref{tab:results}.
+
+\begin{table}[H]
+	\centering
+	\caption{Table of results}
+	\label{tab:results}
+	\begin{tabular}{llll}
+		\toprule
+		\textbf{Light Source} & \textbf{Voltage (V)} & \textbf{Current (mA)} & \textbf{Power (mW)} \\
+		\midrule
+		\textbf{Ambient}      & 0.17                 & 0.1                   & 0.017               \\
+		\textbf{Sunlight}     & 0.20                 & 0.1                   & 0.020               \\
+		\textbf{Tungsten}     & 0.40                 & 0.1                   & 0.040               \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+The current produced by the DSSC was the same for all light sources at 0.1 mA
+which is a very small amount of current. But the voltage and power produced
+increased with the intensity of the light source. The DSSC produced the highest
+voltage under tungsten light at 0.40V which is a peculiar result, as sunlight
+is a much more intense light source than tungsten. This could be due to the
+time of the year as the experiment was conducted in November when the sun is
+not as intense as it is in the summer.
+
+\section{Conclusion}
+In this experiment, we built a Dye Sensitized Solar Cell (DSSC) which was able
+to convert light energy into electrical energy. The testing of the DSSC showed
+that it was able to produce a maximum power of 0.040 mW under tungsten light,
+which is a very small amount of power. This could be due to the small surface
+area of the solar cell, low efficiency of the dye or improper assembly of the
+solar cell. However, the experiment was successful in demonstrating the working
+of a DSSC which can be a sustainable source of energy in the future.
+
+\section{Questions}
+\begin{enumerate}
+	\item What is the function of leaves juice?
+
+	      \textbf{Answer:} The leaves juice acts as a dye that absorbs light and
+	      converts it into electrical energy.
+
+	\item What is the purpose to coat the ITO substrate with graphite pencil?
+
+	      \textbf{Answer:} The graphite pencil is used to coat the ITO substrate with
+	      a layer of carbon. This is done to provide a conductive surface for the
+	      electrons to flow through.
+
+	\item Define Voltage, Current and Power?
+
+	      \textbf{Answer:} Voltage is the potential difference between two points in
+	      an electric field. Current is the rate of flow of charge. Power is the rate
+	      of energy transfer i.e $P = VI$.
+
+	\item Did your solar cell work? What is the maximum power produced?
+
+	      \textbf{Answer:} Yes, our solar cell worked. But the maximum power produced was
+	      only 0.040 mW.
+
+	\item How would you assemble it to measure voltage and current?
+
+	      \textbf{Answer:} We would connect the positive terminal of the multimeter
+	      to the ITO side of the solar cell and the negative terminal to the carbon
+	      side. We would then measure the voltage and current.
+
+	\item How could you improve the efficiency of your solar cell?
+
+	      \textbf{Answer:} We could improve the efficiency of our solar cell by
+	      increasing the surface area of the solar cell. This would allow more light
+	      to be absorbed and converted into electrical energy.
+\end{enumerate}
+
+\end{document}
